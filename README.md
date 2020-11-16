@@ -1,0 +1,37 @@
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+# sdr.neuronal
+
+<!-- badges: start -->
+
+<!-- badges: end -->
+
+The sdr.neuronal package was created by Sideridis Vasileios during his
+work on the neuronsXnets project. Contains useful functions for loading,
+processing and plotting data related with the aforementioned project.
+
+## Installation
+
+You will be able to install the released version of sdr.neuronal from
+[CRAN](https://CRAN.R-project.org) soon with:
+
+``` r
+install.packages("sdr.neuronal")
+```
+
+And the development version from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("vsideridis/sdr.neuronal")
+```
+
+## Example
+
+This is a basic example which shows you how to solve a common problem:
+
+``` r
+library(sdr.neuronal)
+## basic example code
+```

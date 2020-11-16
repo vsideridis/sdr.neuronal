@@ -34,9 +34,9 @@ SpiketrainThresholding = function(deconvolvedSignal, fluorescence, minNonZeroS_n
   numOfNonzeroValues =  sum(s_noise>0.01)
 
   if(numOfNonzeroValues <= minNonZeroS_noise){
-    stdValue = quantile(deconvolvedSignal[which(deconvolvedSignal>0.0001)], .68)
+    stdValue = stats::quantile(deconvolvedSignal[which(deconvolvedSignal>0.0001)], .68)
   }else{
-    stdValue = quantile(s_noise[which(s_noise>0.0001)], .68)
+    stdValue = stats::quantile(s_noise[which(s_noise>0.0001)], .68)
   }
 
   #Threshold is calculated by the product of noise's std and the threshold_dc which is given by the user
