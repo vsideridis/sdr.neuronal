@@ -1,4 +1,16 @@
-SpiketrainThresholding = function(deconvolvedSignal, fluorescense, minNonZeroS_noise = 5, threshold_dc, isHardThreshold = FALSE){
+#' Extract Spiketrain from Deconvolved Signal and Fluorescence Time-series
+#'
+#' @param deconvolvedSignal vector
+#' @param fluorescence vector
+#' @param minNonZeroS_noise number
+#' @param threshold_dc number
+#' @param isHardThreshold logical
+#'
+#' @return vector
+#' @export
+#'
+#' @examples
+SpiketrainThresholding = function(deconvolvedSignal, fluorescence, minNonZeroS_noise = 5, threshold_dc, isHardThreshold = FALSE){
 
   # Simple hard threshold in deconvolved signal
   if(isHardThreshold){
@@ -9,8 +21,8 @@ SpiketrainThresholding = function(deconvolvedSignal, fluorescense, minNonZeroS_n
 
   totalFrames = length(deconvolvedSignal)
 
-  # Noise intervals are the frames where fluorescense is negative
-  noise_intervals = fluorescense<0
+  # Noise intervals are the frames where fluorescence is negative
+  noise_intervals = fluorescence<0
   # Make a circular shift to Noise intervals of 1 frame to the left
   noise_intervals = c(noise_intervals[2:length(noise_intervals)], FALSE)
 
